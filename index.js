@@ -11,6 +11,9 @@ app.get("/home", function(req,res){
     res.render("../views/home")
 })
 
+app.get("/outgoTeste", function(req,res){
+    res.render("../views/outgo")
+})
 //forma de ler JSON
 app.use(
     express.urlencoded({

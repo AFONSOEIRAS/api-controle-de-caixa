@@ -34,7 +34,9 @@ router.get("/", async(req, res) =>{
 try{
     const outgoing = await Outgo.find()
 
-    res.status(200).json(outgoing)
+  
+    //res.status(200).json(outgoing)
+    res.render("outgo", {title:"Lista de Despesas", outgoing:outgoing})
 } catch(error){
     res.status(500).json({error:error})
 }
